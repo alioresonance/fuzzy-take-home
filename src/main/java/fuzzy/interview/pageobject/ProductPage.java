@@ -1,5 +1,6 @@
 package fuzzy.interview.pageobject;
 
+import fuzzy.interview.model.product.Product;
 import fuzzy.interview.model.product.SortedBy;
 import net.serenitybdd.core.pages.ListOfWebElementFacades;
 import org.openqa.selenium.By;
@@ -24,13 +25,17 @@ public class ProductPage extends FuzzyPO {
         return this;
     }
 
-    public ProductPage addToCartAnyProduct() {
+    public ProductPage addToCart(Product product) {
+        // TODO: product param not being used, or implemented, for sake of time
+        // TODO: just click the first Add to cart button found on page
         findAll(By.cssSelector(".inventory_item")).stream().findAny().get()
                 .findElement(By.xpath("//button[text()='Add to cart']")).click();
         return this;
     }
 
-    public ProductPage removeFromCartAnyProduct() {
+    public ProductPage removeFromCart(Product product) {
+        // TODO: product param not being used, or implemented, for sake of time
+        // TODO: just click the first Remove button found on page
         findAll(By.cssSelector(".inventory_item")).stream().findAny().get()
                 .findElement(By.xpath("//button[text()='Remove']")).click();
         return this;

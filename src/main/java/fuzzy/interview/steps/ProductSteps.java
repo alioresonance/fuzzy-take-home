@@ -1,5 +1,6 @@
 package fuzzy.interview.steps;
 
+import fuzzy.interview.model.product.Product;
 import fuzzy.interview.model.product.SortedBy;
 import fuzzy.interview.pageobject.LoginPage;
 import fuzzy.interview.pageobject.ProductPage;
@@ -32,12 +33,12 @@ public class ProductSteps extends AbstractSteps {
     }
 
     public ProductSteps add_any_product_to_cart() {
-        productPage.addToCartAnyProduct();
+        productPage.addToCart(Product.getAny());
         return this;
     }
 
     public ProductSteps remove_any_from_the_cart() {
-        productPage.removeFromCartAnyProduct();
+        productPage.removeFromCart(Product.getAny());
         return this;
     }
 
