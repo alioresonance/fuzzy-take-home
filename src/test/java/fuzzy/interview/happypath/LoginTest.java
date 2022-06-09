@@ -42,13 +42,6 @@ public class LoginTest extends AbstractTest {
                 and_error_message_displayed_is("Epic sadface: Sorry, this user has been locked out.");
     }
 
-    @Title("Verify a problem_user is able to login and validate the difference between a problem_user and a standard_user")
-    @Test
-    public void should_have_same_image_src_for_all_users() {
-        start.
-                check_image_src_for(User.problemUser(), User.standardUser());
-    }
-
     @Title("Verify a performance_glitch_user is able to login and view the Products page")
     @Test
     public void should_be_able_to_login_as_performance_glitch_user() {
@@ -58,5 +51,12 @@ public class LoginTest extends AbstractTest {
                 on_the_login_page().
                 login_as(performanceGlitchUser).
                 should_see_the_product_page();
+    }
+
+    @Title("Verify a problem_user is able to login and validate the difference between a problem_user and a standard_user")
+    @Test
+    public void should_have_same_image_src_for_all_users() {
+        start.
+                check_image_src_for(User.problemUser(), User.standardUser());
     }
 }
