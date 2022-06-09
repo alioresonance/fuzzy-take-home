@@ -40,7 +40,7 @@ public class CartTest extends AbstractTest {
                 should_see_cart_count_of(0);
     }
 
-    @Title("Verify a cart count gets updated correctly")
+    @Title("Verify cart count gets updated correctly")
     @Test
     public void should_be_able_see_cart_count_updated() {
         start.
