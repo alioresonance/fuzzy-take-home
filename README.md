@@ -82,7 +82,7 @@ mvn clean verify -Ppageobjects
 
 ## Fuzzy Interview Take Home Tests
 
-There are also WM Tests implemented using the Screenplay Pattern.
+There are also Fuzzy Tests implemented using the Screenplay Pattern.
 
 To run it, execute:
 
