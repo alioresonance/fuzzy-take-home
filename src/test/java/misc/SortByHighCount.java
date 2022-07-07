@@ -6,7 +6,7 @@ import java.util.*;
 public class SortByHighCount {
 
     private static Map<String, Integer> countCharacterOccurences(String value) {
-        System.out.println("\noriginal input: " + value);
+        System.out.println("\noriginal input string: " + value);
         final Map<String, Integer> counts = new HashMap<>();
 
         for (char c : value.toCharArray()) {
@@ -19,7 +19,7 @@ public class SortByHighCount {
             }
         }
 
-        System.out.println("\nunsorted hashmap:");
+        System.out.println("\nunsorted hashmap counts:");
         for (var entry : counts.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
         return counts;
@@ -38,7 +38,7 @@ public class SortByHighCount {
         Map<String, Integer> sortedLinkedHashMap = new LinkedHashMap<>();
         for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());
 
-        System.out.println("\nsorted linked hashmap:");
+        System.out.println("\nsorted linked hashmap counts:");
         for (var entry : sortedLinkedHashMap.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
 
