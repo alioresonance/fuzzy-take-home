@@ -36,7 +36,7 @@ public class SortByHighCount {
         sorted.addAll(unsortedMap.entrySet());
 
         Map<String, Integer> sortedLinkedHashMap = new LinkedHashMap<>();
-        for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());`
+        for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());
 
         System.out.println("\nsorted Linked Hash Map:");
         for (var entry : sortedLinkedHashMap.entrySet())
