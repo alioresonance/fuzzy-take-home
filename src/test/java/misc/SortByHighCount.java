@@ -19,7 +19,7 @@ public class SortByHighCount {
             }
         }
 
-        System.out.println("\nUnsorted Hash Map:");
+        System.out.println("\nunsorted Hash Map:");
         for (var entry : counts.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
         return counts;
@@ -36,30 +36,27 @@ public class SortByHighCount {
         sorted.addAll(unsortedMap.entrySet());
 
         Map<String, Integer> sortedLinkedHashMap = new LinkedHashMap<>();
-        for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());
+        for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());`
 
-        System.out.println("\nSorted Linked Hash Map:");
+        System.out.println("\nsorted Linked Hash Map:");
         for (var entry : sortedLinkedHashMap.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
 
         return sortedLinkedHashMap;
     }
 
-    private static void printCountedCharacters(Map<String, Integer> sortedLinkedHashMap) {
-        System.out.println("\nResults:");
+    private static void printCountedCharacters(Map<String, Integer> value) {
         String output = "";
-        for (var entry : sortedLinkedHashMap.entrySet()) {
+        for (var entry : sortHashMap(value).entrySet()) {
             for (int i = 0; i < Integer.valueOf(entry.getValue()); i++)
                 output += entry.getKey();
         }
-        System.out.println(output);
+        System.out.println("\nresults: " + output);
     }
 
 
     public static void main(String[] args) {
         String input = "javabbbbbbcc";  // should return “bbbbbaaccjv";
-        var counted = countCharacterOccurences(input);
-        var sortedLinkedHashMap = sortHashMap(counted);
-        printCountedCharacters(sortedLinkedHashMap);
+        printCountedCharacters( countCharacterOccurences(input) );
     }
 }
