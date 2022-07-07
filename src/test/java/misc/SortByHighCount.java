@@ -19,7 +19,7 @@ public class SortByHighCount {
             }
         }
 
-        System.out.println("\nunsorted Hash Map:");
+        System.out.println("\nunsorted hashmap:");
         for (var entry : counts.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
         return counts;
@@ -38,7 +38,7 @@ public class SortByHighCount {
         Map<String, Integer> sortedLinkedHashMap = new LinkedHashMap<>();
         for (var entry : sorted) sortedLinkedHashMap.put(entry.getKey(), entry.getValue());
 
-        System.out.println("\nsorted Linked Hash Map:");
+        System.out.println("\nsorted linked hashmap:");
         for (var entry : sortedLinkedHashMap.entrySet())
             System.out.println(entry.getKey() + ": " + entry.getValue());
 
